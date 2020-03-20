@@ -1,0 +1,398 @@
+/* breakpoints */
+:root {
+  --background-dark: rgb(32, 32, 32);
+  --background-light: rgb(48, 48, 48);
+  --text-dark1: rgb(89, 255, 56);
+  --text-dark2: rgb(56, 199, 0);
+  --color1: #11ff0d;
+  --color2: #297d05;
+  --color3: #e7ff0d;
+  --headers: "VT323", monospace;
+  --text: "PT Sans", sans-serif; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: var(--background-dark); }
+
+h1 {
+  font-size: 45px; }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 25px; } }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: var(--text-dark2);
+  font-family: var(--headers); }
+
+p {
+  color: var(--text-dark2);
+  font-family: var(--text); }
+
+.menu {
+  margin: auto;
+  width: 100%; }
+
+.menu-buttons {
+  background-color: var(--background-dark);
+  font-size: 20px;
+  padding: 30px;
+  position: relative;
+  z-index: 1; }
+  @media (max-width: 767px) {
+    .menu-buttons {
+      padding: 15px; } }
+
+.menu-buttons a {
+  border-radius: 5px;
+  padding: 20px;
+  text-decoration: none;
+  transition: 0.5s;
+  width: 100px; }
+  @media (max-width: 767px) {
+    .menu-buttons a {
+      min-width: 20%;
+      margin: 15px; } }
+
+.menu-buttons a:hover {
+  background-color: var(--text-dark1);
+  color: var(--background-light);
+  font-weight: bold; }
+
+.startView {
+  background-color: var(--background-light); }
+
+.introduction {
+  left: calc(600px + 5%);
+  position: absolute;
+  top: 340px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .introduction {
+      left: calc(340px + 5%); } }
+  @media (max-width: 767px) {
+    .introduction {
+      display: inline-block;
+      position: relative;
+      left: calc(10% + 120px);
+      top: -120px; } }
+
+.canva {
+  left: 15%;
+  max-width: 250px;
+  position: absolute;
+  top: 300px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .canva {
+      left: 0; } }
+  @media (max-width: 767px) {
+    .canva {
+      display: none; } }
+
+.intro-photo-sm {
+  max-width: 120px;
+  position: absolute;
+  display: inline;
+  top: 120px;
+  left: calc(5px + 5%); }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .intro-photo-sm {
+      display: none; } }
+  @media (min-width: 1024px) {
+    .intro-photo-sm {
+      display: none; } }
+
+.visual-container {
+  height: 720px;
+  position: relative;
+  width: 503px;
+  left: 5%; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .visual-container {
+      left: calc(-250px + 5%); } }
+  @media (max-width: 767px) {
+    .visual-container {
+      height: 200px;
+      width: 80%; } }
+
+.paralax {
+  height: 820px;
+  margin: 0 auto;
+  overflow: visible;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  bottom: 0;
+  left: -10%;
+  width: 503px;
+  z-index: 0; }
+  @media (max-width: 767px) {
+    .paralax {
+      display: none; } }
+
+.paralax path,
+.paralax polyline {
+  fill: none;
+  stroke-dasharray: 3000px;
+  stroke-dashoffset: 3000px;
+  transition: 5s stroke-dashoffset ease-in; }
+
+.paralax.on path,
+.paralax.on polyline {
+  stroke-dashoffset: 0; }
+
+.technologies {
+  padding: 50px; }
+  @media (max-width: 767px) {
+    .technologies {
+      padding: 15px; } }
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100px; }
+
+.slide {
+  position: absolute;
+  left: 110%;
+  width: 100px;
+  height: 100%; }
+  @media (max-width: 767px) {
+    .slide {
+      max-width: 25%;
+      max-height: 75%; } }
+
+#slide1 {
+  -webkit-animation: slide1 1s forwards;
+  -webkit-animation-delay: 3s;
+  animation: slide1 1s forwards;
+  animation-delay: 3s; }
+
+#slide2 {
+  -webkit-animation: slide2 1s forwards;
+  -webkit-animation-delay: 4s;
+  animation: slide2 1s forwards;
+  animation-delay: 4s; }
+
+#slide3 {
+  -webkit-animation: slide3 1s forwards;
+  -webkit-animation-delay: 5s;
+  animation: slide3 1s forwards;
+  animation-delay: 5s; }
+
+#slide4 {
+  -webkit-animation: slide4 1s forwards;
+  -webkit-animation-delay: 6s;
+  animation: slide4 1s forwards;
+  animation-delay: 6s; }
+
+@media (min-width: 1024px) {
+  @keyframes slide1 {
+    100% {
+      left: 15%; } }
+  @keyframes slide2 {
+    100% {
+      left: 35%; } }
+  @keyframes slide3 {
+    100% {
+      left: 55%; } }
+  @keyframes slide4 {
+    100% {
+      left: 75%; } } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  @keyframes slide1 {
+    100% {
+      left: 10%; } }
+  @keyframes slide2 {
+    100% {
+      left: 33%; } }
+  @keyframes slide3 {
+    100% {
+      left: 56%; } }
+  @keyframes slide4 {
+    100% {
+      left: 80%; } } }
+
+@media (max-width: 767px) {
+  @keyframes slide1 {
+    100% {
+      left: 0; } }
+  @keyframes slide2 {
+    100% {
+      left: 25%; } }
+  @keyframes slide3 {
+    100% {
+      left: 50%; } }
+  @keyframes slide4 {
+    100% {
+      left: 75%; } } }
+
+.projects {
+  background-color: var(--background-light); }
+  .projects h1 {
+    margin: auto;
+    padding: 40px 20px 0 20px;
+    width: 75%; }
+
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px; }
+
+.project-container {
+  background-color: var(--background-dark);
+  border: inset 3px var(--color1);
+  border-radius: 5px;
+  display: flex;
+  height: 200px;
+  margin: 30px;
+  padding: 15px;
+  transition: 0.5s ease;
+  width: 35%; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .project-container {
+      max-height: 250px;
+      width: 40%;
+      margin: 10px;
+      padding: 10px; } }
+  @media (max-width: 767px) {
+    .project-container {
+      max-height: 200px;
+      width: 100%;
+      margin: 5px;
+      padding: 10px; } }
+
+.project-image {
+  backface-visibility: hidden;
+  border-radius: 3px;
+  display: block;
+  max-height: 150px;
+  max-width: 150px;
+  margin: auto;
+  opacity: 1;
+  transition: 1s ease; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .project-image {
+      max-width: 100px; } }
+  @media (max-width: 767px) {
+    .project-image {
+      max-width: 80px;
+      max-height: 80px; } }
+
+.middle {
+  background-color: black;
+  border-radius: 5px;
+  height: 230px;
+  margin: -15px;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  transition: 0.5s ease;
+  width: calc(35% + 10px);
+  z-index: 1; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .middle {
+      max-height: 220px;
+      width: 40%;
+      margin: -10px; } }
+  @media (max-width: 767px) {
+    .middle {
+      flex-wrap: wrap;
+      align-self: flex-end;
+      opacity: 1;
+      height: auto;
+      width: 70%;
+      margin: 0;
+      background-color: var(--background-dark); } }
+
+@media (min-width: 768px) {
+  .project-container:hover {
+    opacity: 0.5; } }
+
+@media (min-width: 768px) {
+  .project-container:hover .middle {
+    background-color: black;
+    opacity: 0.8; } }
+
+.project-container i {
+  color: var(--color1);
+  font-size: 80px;
+  margin: 75px 20px; }
+  @media (max-width: 767px) {
+    .project-container i {
+      font-size: 40px;
+      margin: 10px; } }
+
+.project-description {
+  margin: auto 15px;
+  padding: 10px;
+  width: 100%; }
+  @media (max-width: 767px) {
+    .project-description {
+      margin: 10px auto; } }
+
+.about {
+  line-height: 25px;
+  margin: 30px auto 0;
+  padding: 20px;
+  width: 75%; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .about {
+      width: 80%; } }
+  @media (max-width: 767px) {
+    .about {
+      width: 90%; } }
+
+.desc {
+  margin-top: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  text-indent: 15px; }
+
+.contact {
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 30px;
+  width: 50%; }
+  @media (max-width: 767px) {
+    .contact {
+      width: 80%; } }
+  .contact a {
+    align-items: center;
+    display: inline-flex;
+    height: 100px;
+    justify-content: center;
+    text-decoration: none;
+    width: 100px; }
+  .contact i {
+    font-size: 35px;
+    height: 100px;
+    transition: ease-out, font-size 2s, transform 2s; }
+    @media (max-width: 767px) {
+      .contact i {
+        font-size: 40px; } }
+  @media (min-width: 768px) {
+    .contact a:hover i {
+      font-size: 60px;
+      transform: rotate(720deg); } }
+
+.fa-envelope {
+  color: var(--color3); }
+
+.fa-linkedin {
+  color: var(--color2); }
+
+.fa-github {
+  color: var(--color1); }
