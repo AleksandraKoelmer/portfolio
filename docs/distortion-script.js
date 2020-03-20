@@ -5,7 +5,7 @@ let windowW = window.innerWidth;
 let windowH = window.innerHeight;
 let isLoaded = false;
 let glitch;
-let imgSrc = "./images/ola.jpg";
+let imgSrc = "images/ola.jpg";
 
 function setup() {
     var canva = createCanvas(350, 300);
